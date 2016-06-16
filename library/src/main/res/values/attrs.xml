@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SimpleCursorView" >
+        <attr name="cursor_size" format="integer"/>
+        <attr name="redius" format="dimension" />
+        <attr name="solid_color" format="color" />
+        <attr name="hollow_color" format="color" />
+        <attr name="space_width" format="dimension" />
+    </declare-styleable>
+</resources>
