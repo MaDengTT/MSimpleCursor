@@ -18,3 +18,12 @@ Add the dependency to your module build.gradle:
 	        compile 'com.github.MaDengTT:MSimpleCursor:0.2'
 	}
 ```
+
+# API
+```xml
+        app:space_width="10dp"
+        app:cursor_size="10"
+        app:solid_color="@color/colorAccent"
+        app:hollow_color="@color/colorPrimary"
+        app:redius="5dp"
+```
