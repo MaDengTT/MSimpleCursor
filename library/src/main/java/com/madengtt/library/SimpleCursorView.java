@@ -60,22 +60,29 @@ public class SimpleCursorView extends View {
 
     private void initView(Context context, AttributeSet attrs, int defStyleAttr) {
         TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.SimpleCursorView,defStyleAttr, 0);
-        int n = a.getIndexCount();
-        for (int i = 0;i<n;i++) {
-            int attr = a.getIndex(i);
-            if (attr == R.styleable.SimpleCursorView_cursor_size) {
-                mSize = a.getInt(attr, 3);
-            } else if (attr == R.styleable.SimpleCursorView_redius) {
-                mRedius = a.getDimensionPixelSize(attr, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()));
-            } else if (attr == R.styleable.SimpleCursorView_hollow_color) {
-                mHollowColor = a.getColor(attr,Color.YELLOW);
-            } else if (attr == R.styleable.SimpleCursorView_space_width) {
-                mSpaceWidth = a.getDimensionPixelSize(attr, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2, getResources().getDisplayMetrics()));
-            } else if (attr == R.styleable.SimpleCursorView_solid_color) {
-                mSolidColor = a.getColor(attr, Color.RED);
-            }
-        }
+        mSize = a.getInt(R.styleable.SimpleCursorView_cursor_size, 3);
+        mRedius = a.getDimensionPixelSize(R.styleable.SimpleCursorView_redius, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()));
+        mHollowColor = a.getColor(R.styleable.SimpleCursorView_hollow_color,Color.YELLOW);
+        mSpaceWidth = a.getDimensionPixelSize(R.styleable.SimpleCursorView_space_width, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2, getResources().getDisplayMetrics()));
+        mSolidColor = a.getColor(R.styleable.SimpleCursorView_solid_color, Color.RED);
+        a.recycle();
+//        int n = a.getIndexCount();
+//        for (int i = 0;i<n;i++) {
+//            int attr = a.getIndex(i);
+//            if (attr == R.styleable.SimpleCursorView_cursor_size) {
+//                mSize = a.getInt(attr, 3);
+//            } else if (attr == R.styleable.SimpleCursorView_redius) {
+//                mRedius = a.getDimensionPixelSize(attr, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics()));
+//            } else if (attr == R.styleable.SimpleCursorView_hollow_color) {
+//                mHollowColor = a.getColor(attr,Color.YELLOW);
+//            } else if (attr == R.styleable.SimpleCursorView_space_width) {
+//                mSpaceWidth = a.getDimensionPixelSize(attr, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2, getResources().getDisplayMetrics()));
+//            } else if (attr == R.styleable.SimpleCursorView_solid_color) {
+//                mSolidColor = a.getColor(attr, Color.RED);
+//            }
+//        }
     }
+
 
 
     /**
