@@ -27,3 +27,10 @@ Add the dependency to your module build.gradle:
         app:hollow_color="@color/colorPrimary"
         app:redius="5dp"
 ```
+update
+```java
+    public void upmCurray(int mCurray) {
+        this.mCursor = mCurray;
+        invalidate();
+    }
+```
